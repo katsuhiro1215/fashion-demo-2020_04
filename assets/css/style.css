@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
+html {
+  font-size: 62.5%;
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px 50px;
+  z-index: 100;
+}
+
+.header .logo {
+  font-size: 2.4rem;
+}
+
+.header .logo a {
+  color: #fff;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav ul li {
+  display: inline-block;
+}
+
+.header-nav ul li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  margin: 0 40px;
+}
+
+.toggle-btn {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+.toggle-btn span:nth-child(2) {
+  top: 15px;
+}
+
+.slider .item {
+  display: flex;
+  background-color: #8c001e;
+}
+
+.slider .item .item-image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  width: 100%;
+  height: 100vh;
+}
+
+.caption {
+  flex: 0 0 50%;
+  max-width: 50%;
+  color: #fff;
+  padding: 230px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.caption h1 {
+  font-weight: 400;
+  font-size: 126px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 10px 15px 0 rgba(0 0 0 / 0.25);
+}
+
+.caption h4 {
+  font-weight: 300;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.caption::before {
+  content: attr(data-count);
+  position: absolute;
+  top: -5%;
+  left: 0;
+  color: #fff;
+  font-size: 500px;
+  font-weight: 300;
+  opacity: 0.1;
+}
+
+.slick-arrow {
+  position: absolute;
+  font-size: 0;
+  width: 17px;
+  height: 81px;
+  background-size: contain;
+  background-position: center;
+  border: 0;
+  left: 50px;
+  z-index: 9;
+}
+
+.slick-prev,
+.slick-prev:hover,
+.slick-prev:focus {
+  background: url() no-repeat;
+  top: 40%;
+}
+
+.slick-next,
+.slick-next:hover,
+.slick-next:focus {
+  background: url() no-repeat;
+  top: 55%;
+}
+
+.slick-next::before,
+.slick-prev::before {
+  display: none;
+}
+
+.slick-dots {
+  width: 30px;
+  bottom: inherit;
+  top: 40%;
+  right: 70px;
+}
+
+.slick-dots li {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.slick-dots li button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ffffff30;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+  border-color: #fff;
+}
+
+.slick-dots li button:hover {
+  border-color: #fff;
+}
+
+.slick-dots li button::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  top: 37%;
+  right: 0;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 50px;
+  opacity: 1 !important;
+}
+
+.bottom-link {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 50px;
+  background-color: rgba(0 0 0 / 0.3);
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-link a {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.bottom-link .left a {
+  padding-right: 90px;
+}
+
+.bottom-link .right a {
+  letter-spacing: 3px;
+}
+
+.bottom-link .left a::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: #fff;
+  right: 25px;
+  top: 50%;
+}
+
+.bottom-link .left a:last-child:after {
+  display: none;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 330px;
+  height: 100%;
+  background-color: #790017;
+  z-index: 1;
+}
+
+.slider-wrap {
+  position: relative;
+  z-index: 9;
+}
+
+.slider .slick-slider {
+  margin-bottom: 0;
+}
+
+.toggleBtnActive span {
+  transform: rotate(45deg);
+}
+
+.toggleBtnActive span:nth-child(2) {
+  transform: rotate(-45deg);
+  top: 10px
+}
+
+.toggleBtnActive span {
+  top: 10px
+}
